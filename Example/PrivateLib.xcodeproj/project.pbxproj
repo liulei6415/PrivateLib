@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		02E865BFB16F957594B00272 /* Pods-PrivateLib_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrivateLib_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrivateLib_Example/Pods-PrivateLib_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		45CF56905F51476C2453D7F5 /* Pods-PrivateLib_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrivateLib_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrivateLib_Example/Pods-PrivateLib_Example.release.xcconfig"; sourceTree = "<group>"; };
-		57A7E572DCD4261122CD086C /* PrivateLib.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivateLib.podspec; path = ../PrivateLib.podspec; sourceTree = "<group>"; };
+		57A7E572DCD4261122CD086C /* PrivateLib.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PrivateLib.podspec; path = ../PrivateLib.podspec; sourceTree = "<group>"; };
 		5A84CD1FD7004BE0FE7DA1F9 /* Pods_PrivateLib_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrivateLib_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* PrivateLib_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrivateLib_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -62,10 +62,10 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6A6768DFA92EF80435EA87A6 /* Pods-PrivateLib_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrivateLib_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrivateLib_Tests/Pods-PrivateLib_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		725B2DB38FE80235BD6EA227 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		725B2DB38FE80235BD6EA227 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		788EF92FD7DA1189BE674ED0 /* Pods-PrivateLib_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrivateLib_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrivateLib_Tests/Pods-PrivateLib_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9C00D5780950BD73B128016D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		9C00D5780950BD73B128016D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		BB966D6AC77296E63963AB6C /* Pods_PrivateLib_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrivateLib_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -250,6 +250,10 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = liulei11;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 9H4SUA4596;
+						ProvisioningStyle = Manual;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -524,12 +528,16 @@
 			baseConfigurationReference = 02E865BFB16F957594B00272 /* Pods-PrivateLib_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 9H4SUA4596;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PrivateLib/PrivateLib-Prefix.pch";
 				INFOPLIST_FILE = "PrivateLib/PrivateLib-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "718831f2-06ea-4eae-90a3-2437642af424";
+				PROVISIONING_PROFILE_SPECIFIER = liulei;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -539,12 +547,15 @@
 			baseConfigurationReference = 45CF56905F51476C2453D7F5 /* Pods-PrivateLib_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PrivateLib/PrivateLib-Prefix.pch";
 				INFOPLIST_FILE = "PrivateLib/PrivateLib-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

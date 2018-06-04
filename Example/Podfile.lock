@@ -1,0 +1,23 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - PrivateLib (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - PrivateLib (from `../`)
+
+EXTERNAL SOURCES:
+  PrivateLib:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: '094f9f314decbabe373b87cc339bea235a63e07a'
+  PrivateLib: 9c51ddcaf3a4f8a6a9ae8b604891d97d4b8e63ec
+
+PODFILE CHECKSUM: 8038c93fd60b53604f32ce98a2fc1391777ee5dc
+
+COCOAPODS: 1.2.0
